@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ judulhalaman}}</title>
+</head>
+<body>
+    <h1>AKTIVITAS HARI INI</h1>
+    <form action="/aktivitas" method="POST">
+    <input type="text" name="inputdetailkegiatan" placeholder="DETAIL KEGIATAN">
+    <input type="text" name="inputTanggal" placeholder="TANGGAL">
+    <button type="submit"> ANDA BERDOSA BANGET!</button>
+    </form>
+    <br/>
+    <table>
+        <thead>
+            <tr>
+                <th>ID TODO</th>
+                <th>DETAIL KEGIATAN</th>
+                <th>TANGGAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{ id_todo }}</td>
+                <td>{{ detail_kegiatan }}</td>
+                <td>{{ Tanggal }}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
